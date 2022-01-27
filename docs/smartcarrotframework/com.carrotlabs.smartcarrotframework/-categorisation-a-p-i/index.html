@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CategorisationAPI - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">CategorisationAPI</a><br/>
+<br/>
+<h1>CategorisationAPI</h1>
+<code><span class="keyword">class </span><span class="identifier">CategorisationAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span></code>
+<p>Allows you to categorise and learn a user’s personalisation setting.</p>
+<p>The object of the <a href="./index.html">CategorisationAPI</a> class cannot be explicitly instantiated, please call <a href="../-carrot-context/get-categorisation-a-p-i.html">CarrotContext.getCategorisationAPI</a> for that.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="categorise.html">categorise</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">categorise</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/isPersonal">isPersonal</span><span class="symbol">:</span>&nbsp;<a href="../-categorisation-type/index.html"><span class="identifier">CategorisationType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;CategorisationType.personal<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Categorises a transaction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="learn.html">learn</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">learn</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$learn(kotlin.String, java.math.BigDecimal, kotlin.Int)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$learn(kotlin.String, java.math.BigDecimal, kotlin.Int)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$learn(kotlin.String, java.math.BigDecimal, kotlin.Int)/personalCategoryId">personalCategoryId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Learns user's categorisation on a transaction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes (resets) all user's learnings</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

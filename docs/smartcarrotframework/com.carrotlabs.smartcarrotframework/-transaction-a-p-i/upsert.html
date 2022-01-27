@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionAPI.upsert - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="index.html">TransactionAPI</a>&nbsp;/&nbsp;<a href="./upsert.html">upsert</a><br/>
+<br/>
+<h1>upsert</h1>
+<a name="com.carrotlabs.smartcarrotframework.TransactionAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)), kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">upsert</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)), kotlin.Boolean)/transactions">transactions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)), kotlin.Boolean)/categorise">categorise</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds or updates an array of <a href="../-transaction/index.html">Transaction</a>s.</p>
+<p>if a transaction is already categorised, then it will be still recategorised. The method uses <a href="../-transaction/id.html">Transaction.id</a> to determine whether the transaction is already present in the persistent storage and must be updated.</p>
+<h3>Parameters</h3>
+<p><a name="transactions"></a>
+<code>transactions</code> - a list of transactions to be updated or inserted.</p>
+<p><a name="categorise"></a>
+<code>categorise</code> - whether the transactions must be categorised before saving into the persistent storage.</p>
+<p><strong>Exceptions</strong><br/>
+</p>
+</BODY>
+</HTML>

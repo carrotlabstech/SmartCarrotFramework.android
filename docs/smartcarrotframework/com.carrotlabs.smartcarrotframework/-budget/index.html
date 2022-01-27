@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Budget - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">Budget</a><br/>
+<br/>
+<h1>Budget</h1>
+<code><span class="keyword">class </span><span class="identifier">Budget</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityTypeWithId</span></code>
+<p>Incremental Budget</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Budget</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/externalId">externalId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/accountId">accountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/budgeted">budgeted</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a>&nbsp;<span class="symbol">=</span>&nbsp;BigDecimal(0)<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/alert">alert</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a>&nbsp;<span class="symbol">=</span>&nbsp;BigDecimal(0)<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/categoryId">categoryId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;TransactionCategory.UNCATEGORISED_INT_ID<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Budget$<init>(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, java.math.BigDecimal, java.math.BigDecimal, kotlin.Int, com.carrotlabs.smartcarrotframework.BudgetFrequency)/frequencyType">frequencyType</span><span class="symbol">:</span>&nbsp;<a href="../-budget-frequency/index.html"><span class="identifier">BudgetFrequency</span></a>&nbsp;<span class="symbol">=</span>&nbsp;BudgetFrequency.monthly<span class="symbol">)</span></code>
+<p>Incremental Budget</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="account-id.html">accountId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accountId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Account Id. Is not taken into account for calculations, reserved for future use.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="alert.html">alert</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">alert</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Budget Alert Threshold, a notification will be sent if it has been reached</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="budgeted.html">budgeted</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">budgeted</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Budgeted Amount, always positive</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="category-id.html">categoryId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">categoryId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Budget Category Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="currency.html">currency</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Currency. Is not taken into account for calculations, reserved for future use.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="external-id.html">externalId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">externalId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>External Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frequency-type.html">frequencyType</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">frequencyType</span><span class="symbol">: </span><a href="../-budget-frequency/index.html"><span class="identifier">BudgetFrequency</span></a></code>
+<p>Budget Frequency Type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Budget Id, maintained by the customer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Budget Name</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Budget</span></a></code>
+<p>Copies a budget.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

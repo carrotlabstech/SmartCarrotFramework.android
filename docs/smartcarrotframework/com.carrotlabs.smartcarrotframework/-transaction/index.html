@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Transaction - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">Transaction</a><br/>
+<br/>
+<h1>Transaction</h1>
+<code><span class="keyword">class </span><span class="identifier">Transaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityTypeWithId</span></code>
+<p>Transaction</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Transaction</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/externalId">externalId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a>&nbsp;<span class="symbol">=</span>&nbsp;BigDecimal.ZERO<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/currency">currency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"CHF"<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/sourceAmount">sourceAmount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/sourceCurrency">sourceCurrency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/sourceExchangeRate">sourceExchangeRate</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/bookingText">bookingText</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/bookingDate">bookingDate</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span>&nbsp;<span class="symbol">=</span>&nbsp;LocalDateTime.now()<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/valueDate">valueDate</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/categoryId">categoryId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/userCategoryId">userCategoryId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/accountId">accountId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/userNote">userNote</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/customProperty1">customProperty1</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/customProperty2">customProperty2</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/created">created</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Transaction$<init>(kotlin.String, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, java.math.BigDecimal, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, org.threeten.bp.LocalDateTime, org.threeten.bp.LocalDateTime)/modified">modified</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDateTime</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Transaction</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="account-id.html">accountId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">accountId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Transaction Account id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="amount.html">amount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">amount</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Amount. Used by budgets and budget alerts</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="booking-date.html">bookingDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">bookingDate</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span></code>
+<p>Booking Date. Used by budgets and budget alerts, Zen scores</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="booking-text.html">bookingText</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">bookingText</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Booking Text</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="category-id.html">categoryId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">categoryId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>Category Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="created.html">created</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">created</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code>
+<p>Transactions creation date</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="currency.html">currency</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Currency</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-property1.html">customProperty1</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">customProperty1</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Customer property one, reserved for customer's use.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom-property2.html">customProperty2</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">customProperty2</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Customer property two, reserved for customer's use.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="external-id.html">externalId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">externalId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>External Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Transaction Id. Should be set and controlled by the customer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="modified.html">modified</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">modified</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code>
+<p>Transaction modification date</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="source-amount.html">sourceAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sourceAmount</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span></code>
+<p>Source Amount</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="source-currency.html">sourceCurrency</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sourceCurrency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Source Currency</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="source-exchange-rate.html">sourceExchangeRate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sourceExchangeRate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">?</span></code>
+<p>Source Exchange Rate</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-category-id.html">userCategoryId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userCategoryId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code>
+<p>User category Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user-note.html">userNote</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">userNote</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>User notes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="value-date.html">valueDate</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">valueDate</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code>
+<p>Value date</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Transaction</span></a></code>
+<p>Copies a transaction.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

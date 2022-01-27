@@ -1,0 +1,90 @@
+apply plugin: 'maven-publish'
+
+def getVersionName() {
+//    return "2"
+    return "1.0.1"
+}
+
+def getGitLabAccessToken() {
+    return "WhWytdkiS_TBU_C6wbLY"
+}
+
+def getGroupId() {
+    return "com.carrotlabs"
+}
+
+def getArtifactId() {
+    return "smartcarrotframework"
+}
+
+def isReleaseBuild() {
+//    return !Config.versionName.contains("SNAPSHOT")
+//    return getVersionName().contains("release")
+    return true
+}
+
+def getOutputDir() {
+    if (isReleaseBuild()) {
+        return "${project.buildDir}/releases"
+    } else {
+        return "${project.buildDir}/snapshots"
+    }
+}
+
+def getArtifactFilePath() {
+    if (isReleaseBuild()) {
+        return "$buildDir/outputs/aar/${Config.artifactId}-release.aar"
+//        return "$buildDir/smartcarrotframework/outputs/aar/${getArtifactId()}-release.aar"
+} else {
+        return "$buildDir/outputs/aar/${Config.artifactId}-debug.aar"
+//        return "$buildDir/smartcarrotframework/outputs/aar/${getArtifactId()}-debug.aar"
+    }
+}
+
+def getPublicationName() {
+    if (isReleaseBuild()) {
+        return "release"
+    } else {
+        return "debug"
+    }
+}
+
+publishing {
+    publications {
+        "${getPublicationName()}"(MavenPublication) {
+            groupId "com.carrotlabs"
+            artifactId "smartcarrotframework.ch"
+            artifact("$buildDir/outputs/aar/smartcarrotframework-release.aar")
+//            artifact getArtifactFilePath() // Config.artifactId // my-component-library
+            version "1.0.1"
+
+            // To include project dependencies
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.implementation.allDependencies.each { dependency ->
+                    if (dependency.name != 'unspecified') {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', dependency.group)
+                        dependencyNode.appendNode('artifactId', dependency.name)
+                        dependencyNode.appendNode('version', dependency.version)
+                    }
+                }
+            }
+        }
+
+    }
+    repositories {
+        maven {
+            url "https://<...>maven"
+            name "GitLab"
+
+            credentials(HttpHeaderCredentials) {
+                name = "Private-Token"
+                value = "no, no, we don't share it" // Config.gitLabAccessToken
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+    }
+}

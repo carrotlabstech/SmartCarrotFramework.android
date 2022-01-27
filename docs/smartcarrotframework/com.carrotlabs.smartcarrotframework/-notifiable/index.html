@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Notifiable - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">Notifiable</a><br/>
+<br/>
+<h1>Notifiable</h1>
+<code><span class="keyword">interface </span><span class="identifier">Notifiable</span></code>
+<p>An interface to allow objects to subscribe to <a href="../-notification-center/-notification-name/index.html">NotificationCenter.NotificationName</a> events.
+An object which implements this interface can be passed as a parameter to <a href="../-notification-center/add-observer.html">NotificationCenter.addObserver</a> and <a href="../-notification-center/remove-observer.html">NotificationCenter.removeObserver</a> methods
+in order to subscribe / unsubscribe from <a href="../-notification-center/-notification-name/index.html">NotificationCenter.NotificationName</a> events.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="on-notification.html">onNotification</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onNotification</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.Notifiable$onNotification(com.carrotlabs.smartcarrotframework.Notification)/notify">notify</span><span class="symbol">:</span>&nbsp;<a href="../-notification/index.html"><span class="identifier">Notification</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>This method of a <a href="./index.html">Notifiable</a> object gets called in case of an event the object is subscribed to (is an observer of).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-budget-a-p-i/index.html">BudgetAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BudgetAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">Notifiable</span></a></code>
+<p>The <a href="../-budget-a-p-i/index.html">BudgetAPI</a> class provides access to various incremental budget related functionality.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

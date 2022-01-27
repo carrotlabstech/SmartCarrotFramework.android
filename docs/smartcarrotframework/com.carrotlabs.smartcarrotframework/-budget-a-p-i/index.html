@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BudgetAPI - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">BudgetAPI</a><br/>
+<br/>
+<h1>BudgetAPI</h1>
+<code><span class="keyword">class </span><span class="identifier">BudgetAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span><span class="symbol">, </span><a href="../-notifiable/index.html"><span class="identifier">Notifiable</span></a></code>
+<p>The <a href="./index.html">BudgetAPI</a> class provides access to various incremental budget related functionality.</p>
+<p>The object of the class cannot be explicitly instantiated, please call <a href="../-carrot-context/get-budget-a-p-i.html">CarrotContext.getBudgetAPI</a> for that</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Must be closed when no more used.
+Intended to remove all observers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$delete(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Budget)))/budgets">budgets</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes an array of budgets from the persistent storage. Identifies budgets by their <code>id</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-all.html">getAll</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">&gt;</span></code>
+<p>Finds all budgets from the persistent storage.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-all-order-by-name-id.html">getAllOrderByNameId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getAllOrderByNameId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">&gt;</span></code>
+<p>Finds all budgets from the persistent storage, sorted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-balance.html">getBalance</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getBalance(com.carrotlabs.smartcarrotframework.Budget)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Calculates budget balance as per <code>today</code>.</p>
+<code><span class="keyword">fun </span><span class="identifier">getBalance</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getBalance(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getBalance(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getBalance(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Calculates budget balance as per selected year and month.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-by-id.html">getById</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getById</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getById(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">?</span></code>
+<p>Finds a <a href="../-budget/index.html">Budget</a> by its id, <a href="#">null</a> if the <a href="../-budget/index.html">Budget</a> was not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-running-total.html">getRunningTotal</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRunningTotal</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getRunningTotal(com.carrotlabs.smartcarrotframework.Budget)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Calculates budget running total as per <code>today</code>.</p>
+<code><span class="keyword">fun </span><span class="identifier">getRunningTotal</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getRunningTotal(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getRunningTotal(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getRunningTotal(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a></code>
+<p>Calculates budget running total as per selected year and month.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-transactions-count.html">getTransactionsCount</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsCount</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsCount</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Finds a count of transactions, which match the <a href="../-budget/index.html">Budget</a> by:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-notification.html">onNotification</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onNotification</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$onNotification(com.carrotlabs.smartcarrotframework.Notification)/notify">notify</span><span class="symbol">:</span>&nbsp;<a href="../-notification/index.html"><span class="identifier">Notification</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>This method of a <a href="../-notifiable/index.html">Notifiable</a> object gets called in case of an event the object is subscribed to (is an observer of).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upsert.html">upsert</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">upsert</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Budget)))/budgets">budgets</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Updates or inserts an array of budgets in the persistent storage. Identifies budgets by their id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

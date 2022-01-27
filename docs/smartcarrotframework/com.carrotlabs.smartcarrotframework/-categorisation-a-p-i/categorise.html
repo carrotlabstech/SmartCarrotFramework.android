@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CategorisationAPI.categorise - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="index.html">CategorisationAPI</a>&nbsp;/&nbsp;<a href="./categorise.html">categorise</a><br/>
+<br/>
+<h1>categorise</h1>
+<a name="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)"></a>
+<code><span class="keyword">fun </span><span class="identifier">categorise</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/amount">amount</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/math/BigDecimal.html"><span class="identifier">BigDecimal</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CategorisationAPI$categorise(kotlin.String, java.math.BigDecimal, com.carrotlabs.smartcarrotframework.CategorisationType)/isPersonal">isPersonal</span><span class="symbol">:</span>&nbsp;<a href="../-categorisation-type/index.html"><span class="identifier">CategorisationType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;CategorisationType.personal<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Categorises a transaction</p>
+<h3>Parameters</h3>
+<p><a name="description"></a>
+<code>description</code> - transaction description</p>
+<p><a name="amount"></a>
+<code>amount</code> - transaction amount</p>
+<p><a name="isPersonal"></a>
+<code>isPersonal</code> - if personalisation should be applied. Set it to <a href="../-categorisation-type/personal.html">CategorisationType.personal</a> if you want to apply user personalisation settings, and to <a href="../-categorisation-type/non-personal.html">CategorisationType.nonPersonal</a> if you want to use generalised model. Default value is <a href="../-categorisation-type/personal.html">CategorisationType.personal</a>`.</p>
+<h3>Exceptions</h3>
+<p><a name="NotAuthorisedCarrotContextError"></a>
+<code>NotAuthorisedCarrotContextError</code> - if CategorizationContext has not been authorized</p>
+<p><a name="FailedToLoadModelCarrotContextError"></a>
+<code>FailedToLoadModelCarrotContextError</code> - if the model didn't load</p>
+<p><strong>Return</strong><br/>
+Transaction category Id</p>
+</BODY>
+</HTML>

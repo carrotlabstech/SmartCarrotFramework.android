@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BudgetAPI.getTransactionsCount - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="index.html">BudgetAPI</a>&nbsp;/&nbsp;<a href="./get-transactions-count.html">getTransactionsCount</a><br/>
+<br/>
+<h1>getTransactionsCount</h1>
+<a name="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsCount</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Finds a count of transactions, which match the <a href="../-budget/index.html">Budget</a> by:</p>
+<ul><li>current month if the <a href="get-transactions-count.html#com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget)/budget">budget</a> is <a href="../-budget-frequency/monthly.html">BudgetFrequency.monthly</a></li>
+<li>current month and year if the budget is <a href="../-budget-frequency/annual.html">BudgetFrequency.annual</a></li>
+<li>category</li>
+<li>currency (currently not implemented, reserved for future use)</li>
+<li>accountId (currently not implemented, reserved for future use)</li>
+</ul>
+<h1>Note:</h1>
+<p>If a budget matches a category, then category's sub-categories doesn't match the budget.</p>
+<h3>Parameters</h3>
+<p><a name="budget"></a>
+<code>budget</code> - a <a href="../-budget/index.html">Budget</a> to find the matching transactions count for.</p>
+<p><strong>Returns</strong><br/>
+count of transactions</p>
+<p><strong>Exceptions</strong><br/>
+</p>
+<a name="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionsCount</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</span><span class="symbol">:</span>&nbsp;<a href="../-budget/index.html"><span class="identifier">Budget</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Finds a count of transactions, which match the <a href="../-budget/index.html">Budget</a> by:</p>
+<ul><li><code>month</code> if the <a href="get-transactions-count.html#com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</a> is <a href="../-budget-frequency/monthly.html">BudgetFrequency.monthly</a></li>
+<li><code>month</code> and <code>year</code> if the <a href="get-transactions-count.html#com.carrotlabs.smartcarrotframework.BudgetAPI$getTransactionsCount(com.carrotlabs.smartcarrotframework.Budget, kotlin.Int, kotlin.Int)/budget">budget</a> is <a href="../-budget-frequency/annual.html">BudgetFrequency.annual</a></li>
+<li>category</li>
+<li>currency (currently not implemented, reserved for future use)</li>
+<li>accountId (currently not implemented, reserved for future use)</li>
+</ul>
+<h1>Note:</h1>
+<p>If a budget matches a category, then category's sub-categories doesn't match the budget.</p>
+<h3>Parameters</h3>
+<p><a name="budget"></a>
+<code>budget</code> - a <a href="../-budget/index.html">Budget</a> to find the matching transactions count for.</p>
+<p><a name="year"></a>
+<code>year</code> - a year to find the matching transactions count for.</p>
+<p><a name="month"></a>
+<code>month</code> - a month to find the matching transactions count for.</p>
+<p><strong>Returns</strong><br/>
+count of transactions</p>
+<p><strong>Exceptions</strong><br/>
+</p>
+</BODY>
+</HTML>

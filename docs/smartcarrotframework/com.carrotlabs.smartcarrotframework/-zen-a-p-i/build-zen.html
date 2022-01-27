@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ZenAPI.buildZen - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="index.html">ZenAPI</a>&nbsp;/&nbsp;<a href="./build-zen.html">buildZen</a><br/>
+<br/>
+<h1>buildZen</h1>
+<a name="com.carrotlabs.smartcarrotframework.ZenAPI$buildZen()"></a>
+<code><span class="keyword">fun </span><span class="identifier">buildZen</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html"><span class="identifier">ZenScore</span></a><span class="symbol">&gt;</span></code>
+<p>Builds an array of <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a>s based on user's saved financial information.</p>
+<h3>Exceptions</h3>
+<p><a name="ZenScoreNoBudgetsCarrotContextError"></a>
+<code>ZenScoreNoBudgetsCarrotContextError</code> - if there is no one budget found.</p>
+<p><strong>Return</strong><br/>
+A list of user's <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a>.
+The list includes all the days from the first saved transaction date to the last saved transaction date consequently.
+The maximum interval is limited by <a href="#">ZenParams.MAX_INTERVAL</a> days, and if it is exceeded then the last date in the <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a> sequence is the closest saved transaction date (day).</p>
+<a name="com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)"></a>
+<code><span class="keyword">fun </span><span class="identifier">buildZen</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)/startDate">startDate</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDate</span><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)/endDate">endDate</span><span class="symbol">:</span>&nbsp;<span class="identifier">LocalDate</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html"><span class="identifier">ZenScore</span></a><span class="symbol">&gt;</span></code>
+<p>Builds an array of <code>ZenScore</code>s based on user's saved financial information.</p>
+<h3>Param</h3>
+<p><a name="startDate"></a>
+<code>startDate</code> - the first date for the generated <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a> sequence.</p>
+<p><a name="endDate"></a>
+<code>endDate</code> - the last date for the generated <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a> sequence.</p>
+<h3>Exceptions</h3>
+<p><a name="ZenScoreNoBudgetsCarrotContextError"></a>
+<code>ZenScoreNoBudgetsCarrotContextError</code> - if there is no one budget found.</p>
+<p><strong>Return</strong><br/>
+A list of user's <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a>. The list includes all the days from the <a href="build-zen.html#com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)/startDate">startDate</a> to the <a href="build-zen.html#com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)/endDate">endDate</a> consequently.
+The maximum interval is limited by <a href="#">ZenParams.MAX_INTERVAL</a> days, and if it is exceeded then the last date in the <a href="../../com.carrotlabs.smartcarrotframework.scoring/-zen-score/index.html">ZenScore</a> sequence is the <a href="build-zen.html#com.carrotlabs.smartcarrotframework.ZenAPI$buildZen(org.threeten.bp.LocalDate, org.threeten.bp.LocalDate)/endDate">endDate</a> date.</p>
+</BODY>
+</HTML>

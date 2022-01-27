@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CarrotContext - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">CarrotContext</a><br/>
+<br/>
+<h1>CarrotContext</h1>
+<code><span class="keyword">class </span><span class="identifier">CarrotContext</span></code>
+<p>Carrot Context class. Them main entry point into the Framework.</p>
+<h1>Note:</h1>
+<p>Warning: <code>CarrotContext</code> class is not thread safe.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CarrotContext</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-budget-a-p-i.html">getBudgetAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBudgetAPI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-budget-a-p-i/index.html"><span class="identifier">BudgetAPI</span></a></code>
+<p>Provides the <a href="./index.html">BudgetAPI</a> validates the license and instantiates the object if license is valid, otherwise it throws an error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-categorisation-a-p-i.html">getCategorisationAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCategorisationAPI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-categorisation-a-p-i/index.html"><span class="identifier">CategorisationAPI</span></a></code>
+<p>Provides the <a href="../-categorisation-a-p-i/index.html">CategorisationAPI</a>.
+<a href="./index.html">CarrotContext</a> validates the license and instantiates the object if license is valid, otherwise it throws an error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-transaction-a-p-i.html">getTransactionAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionAPI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-transaction-a-p-i/index.html"><span class="identifier">TransactionAPI</span></a></code>
+<p>Provides the <a href="../-transaction-a-p-i/index.html">TransactionAPI</a>.
+<a href="./index.html">CarrotContext</a> validates the license and instantiates the object if license is valid, otherwise it throws an error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-zen-a-p-i.html">getZenAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getZenAPI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-zen-a-p-i/index.html"><span class="identifier">ZenAPI</span></a></code>
+<p>Provides the Zen Score Calculation API
+<a href="./index.html">CarrotContext</a> validates the license and instantiates the object if license is valid, otherwise it throws an error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-encryption.html">setEncryption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setEncryption</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setEncryption(kotlin.String, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setEncryption(kotlin.String, kotlin.String)/iv">iv</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Set Encryption parameters. The encryption parameters are required for storing data in the persistent storage. If the encryption keys were not set, then all persistent related methods will <code>throw</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-license.html">setLicense</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLicense</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context)/license">license</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setLicense</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context, kotlin.String, kotlin.String)/license">license</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context, kotlin.String, kotlin.String)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context, kotlin.String, kotlin.String)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.CarrotContext$setLicense(kotlin.String, android.content.Context, kotlin.String, kotlin.String)/encryptionIV">encryptionIV</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Applies library license. Throws an Error if the license is invalid.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

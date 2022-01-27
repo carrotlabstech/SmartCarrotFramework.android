@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>smartcarrotframework</title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">smartcarrotframework</a><br/>
+<br/>
+<p>© 2021 <a href="../../../index.html">Carrot Labs GmbH</a>. All rights reserved. (Last updated: 2021-03-22)
+Version 1.0.1</p>
+<h2>On device Personal Finance Manager.</h2>
+<p><strong>Package documentation</strong> <a href="com.carrotlabs.smartcarrotframework/index.html">com.carrotlabs.smartcarrotframework</a></p>
+<h2>Installation</h2>
+<p>The simplest way to integrate <strong>SmartCarrotFramework</strong> is to use gradle.</p>
+<p>a) add following code snippet into <code>allprojects</code> in the <strong>top-level</strong> <code>build.gradle</code>:</p>
+<pre><code>allprojects {
+    repositories {
+
+       # Add this block before google or/and jcenter Maven repositories
+       # --------------------------------------------------------------
+        maven {
+            url "https://gitlab.com/api/v4/projects/24153564/packages/maven"
+            name "GitLab"
+
+            credentials(HttpHeaderCredentials) {
+                name = "Private-Token"
+                value = "YOUR_TOKEN_HERE"   # replace the token with your token
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+
+        # --------------------------------------------------------------
+        # end of the block
+
+        google()
+        jcenter()
+    }
+}
+</code></pre>
+<p>b) replace the <strong>YOUR_TOKEN_HERE</strong> value of the <code>Private-Token</code> with your own (you can generate it as GitLab suggests <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">here:</a></p>
+<p>Allow <code>read_registry</code> scope at least.</p>
+<p>c) extend <code>dependencies</code> section in the <strong>application level</strong> <code>build.gradle</code> as per your license:</p>
+<pre><code>implementation 'com.carrotlabs:smartcarrotframework.us:1.0.1'
+</code></pre>
+<p>or</p>
+<pre><code>implementation 'com.carrotlabs:smartcarrotframework.ch:1.0.1'
+</code></pre>
+<p>d) Done</p>
+<h2>Manual installation</h2>
+<p>Please follow these steps to install the library:</p>
+<p>a) Make sure you have added these lines into the <strong>build.gradle</strong>:</p>
+<pre><code>repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+</code></pre>
+<p>b) Add dependencies:</p>
+<ul><li><a href="https://github.com/JakeWharton/ThreeTenABP">ThreeTenABP</a>. We use this library to make it easier to work with Date and Time in the old Java versions. Please find instruction on its downloading <a href="https://github.com/JakeWharton/ThreeTenABP#download">here</a></li>
+<li><a href="https://kotlinlang.org/">Kotlin</a> stdlib library. If you already use Kotlin in your project then you don't need to do anything. Otherwise please add following line to your <strong>application/build.gradle</strong> file:</li>
+</ul>
+<pre><code>implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.0"
+</code></pre><ul><li><strong>TensorFlowLight</strong>. <strong>DON'T</strong> use the standard Maven library and use the shared one. Please copy it to the <code>libs</code> folder and add the following instruction to the <strong>application/build.gradle</strong>:</li>
+</ul>
+<pre><code>implementation files('libs/tensorflow-lite.aar')
+</code></pre><ul><li><strong>SmartCarrotFramework</strong>. Copy it to the <code>libs</code> folder and add the following instruction to the <strong>application/build.gradle</strong>:</li>
+</ul>
+<pre><code>implementation files('libs/smartcarrotframework.aar')
+</code></pre>
+<p>c) Done.</p>
+<h2>Licensing</h2>
+<p>Licenses are granted on per module basis. You share your application bundle id with <strong>Carrot Labs</strong>, and we will send you a mail with the license and instructions.</p>
+<p>How to set the license:</p>
+<pre><code class="lang-kotlin">import com.carrotlabs.smartcarrotframework
+
+...
+
+fun setLicense(license: String) {
+    val carrotContext = CarrotContext()
+
+    try {
+        carrotContext.setLicense(license = license, appContext = _applicationContext)
+    } catch (e: Exception) {
+        ...
+    }
+}
+</code></pre>
+<h2>Modules</h2>
+<p><strong>SmartCarrotFramework</strong> consists of few modules:</p>
+<ul><li><a href="com.carrotlabs.smartcarrotframework/-categorisation-a-p-i/index.html">CategorisationAPI</a> to categorise transactions.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-transaction-a-p-i/index.html">TransactionAPI</a> to categorise, manipulate, and store transactions.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-budget-a-p-i/index.html">BudgetAPI</a> to set incremental budgets on transactions and be able to receive alerts if a budget did overspent, or did reach its spend threshold.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-zen-a-p-i/index.html">ZenAPI</a> to let the end user carefully look after own financial health and form positive habits.</li>
+</ul>
+<p>The full power of the <strong>SmartCarrotFramework</strong> can be obtained only when all the building blocks are used jointly.</p>
+<h2>Categorisation</h2>
+<p>It is very easy to categorise a transaction: use a <code>CategorisationAPI</code> object for that:</p>
+<pre><code class="lang-kotlin">import com.carrotlabs.smartcarrotframework
+
+...
+
+fun doCategorise(transactionDescription: String, transactionAmount: BigDecimal) {
+    try {
+        val categorisationAPI = carrotContext.getCategorisationAPI()
+
+        val categoryId = categorisationAPI.categorise(description = transactionDescription, amount = transactionAmount)
+    } catch (e: Exception) {
+        ...
+    }
+}
+</code></pre>
+<h2>Transaction Categorisation</h2>
+<p>You don't need to categorise transactions in a separate method call. At the time of <a href="com.carrotlabs.smartcarrotframework/-transaction-a-p-i/upsert.html">TransactionAPI.upsert</a> transactions do categorise automatically.</p>
+<h2>Budgets</h2>
+<ul><li><a href="com.carrotlabs.smartcarrotframework/-budget-frequency/monthly.html">BudgetFrequency.monthly</a> budget takes into account all the transactions whose <code>Transaction.bookingDate</code> belongs to the <strong>current month</strong>.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-budget-frequency/annual.html">BudgetFrequency.annual</a> budget takes into account all the transactions whose <code>Transaction.bookingDate</code> belongs to the <strong>current year</strong>.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-budget-a-p-i/get-running-total.html">BudgetAPI.getRunningTotal</a> is always positive, it is a sum of all the transactions per budget. If a budget's category is a top level category than transactions of the category's sub categories are not added. Budget of the <a href="com.carrotlabs.smartcarrotframework/-transaction-category/-u-n-c-a-t-e-g-o-r-i-s-e-d.html">TransactionCategory.UNCATEGORISED</a> category is allowed.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-budget-a-p-i/get-balance.html">BudgetAPI.getBalance</a> is <strong>positive</strong> if budget's running total is less than the budgeted amount and is <strong>negative</strong> otherwise.</li>
+</ul>
+<p>When a budget gets saved:</p>
+<ul><li>its <a href="com.carrotlabs.smartcarrotframework/-budget/id.html">Budget.id</a> is trimmed</li>
+<li>Negative <a href="com.carrotlabs.smartcarrotframework/-budget/budgeted.html">Budget.budgeted</a> amount is set to <strong>0</strong></li>
+<li>Negative <a href="com.carrotlabs.smartcarrotframework/-budget/alert.html">Budget.alert</a> amount is set to <strong>0</strong></li>
+<li>Negative <a href="com.carrotlabs.smartcarrotframework/-budget/category-id.html">Budget.categoryId</a> is set to <a href="com.carrotlabs.smartcarrotframework/-transaction-category/-u-n-c-a-t-e-g-o-r-i-s-e-d_-i-n-t_-i-d.html">TransactionCategory.UNCATEGORISED_INT_ID</a></li>
+</ul>
+<h2>Persistence</h2>
+<p>All entities are encrypted and stored in the <strong>SQLite</strong>. The encryption key should be provided by the customer and set right after the license validation:</p>
+<pre><code class="lang-swift">import com.carrotlabs.smartcarrotframework
+
+...
+
+fun setLicense(license: String) {
+    var carrotContext = CarrotContext()
+
+    try {
+        carrotContext.setLicense(license = license, appContext = _applicationContext)
+        carrotContext.setEncryption(key = "thisIsGreatKey!", iv = "1234567890123456")
+    } catch (e:Exception) {
+        ...
+    }
+}
+</code></pre>
+<p>the encryption key consists of:</p>
+<ul><li>the <strong>key</strong> by itself,</li>
+<li><strong>initialisation vector</strong>, <strong>must be of 16 characters long.</strong></li>
+</ul>
+<h2>Entity Ids</h2>
+<p>The Framework is not responsible for entity (<a href="com.carrotlabs.smartcarrotframework/-transaction/index.html">Transaction</a>, <a href="com.carrotlabs.smartcarrotframework/-budget/index.html">Budget</a>) unique identifiers. They should be maintained by the customer. The ids are of type <a href="#">String</a> and the customer can use either own backend entity ids or <a href="#">UUID</a> values.</p>
+<p>If an entity id is empty, the entity can't be saved into the persistent storage and a respective <code>EmptyEntityIdCarrotContextError</code> is thrown.</p>
+<p>Entity Ids are trimmed before being saved.</p>
+<h2>Events</h2>
+<p>At the moment these four types of events are emitted:</p>
+<ul><li><a href="com.carrotlabs.smartcarrotframework/-notification-center/-notification-name/transaction-list-did-update.html">NotificationCenter.NotificationName.transactionListDidUpdate</a> if a transaction in the persistent storage got updated, inserted, deleted or categorised.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-notification-center/-notification-name/budget-list-did-update.html">NotificationCenter.NotificationName.budgetListDidUpdate</a> if a budget in the persistent storage got updated, inserted or deleted.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-notification-center/-notification-name/budget-did-alert.html">NotificationCenter.NotificationName.budgetDidAlert</a> if a budget's <a href="com.carrotlabs.smartcarrotframework/-budget-a-p-i/get-running-total.html">runningTotal</a> exceeded its <a href="com.carrotlabs.smartcarrotframework/-budget/alert.html">alert</a> value but still less than its <a href="com.carrotlabs.smartcarrotframework/-budget/budgeted.html">budgeted</a> value.</li>
+<li><a href="com.carrotlabs.smartcarrotframework/-notification-center/-notification-name/budget-did-over-spend.html">NotificationCenter.NotificationName.budgetDidOverSpend</a> if the budget's <a href="com.carrotlabs.smartcarrotframework/-budget-a-p-i/get-running-total.html">runningTotal</a> exceeded its <a href="com.carrotlabs.smartcarrotframework/-budget/budgeted.html">budgeted</a> value.</li>
+</ul>
+<p>How to subscribe to events:</p>
+<pre><code class="lang-kotlin">import com.carrotlabs.smartcarrotframework
+
+...
+// Observer
+class Observer : Notifiable {
+    override fun onNotification(notify: Notification?) {
+        // respond to the event
+    }
+
+    // Subscribe
+    fun subscribeToBudgetNotification() {
+        NotificationCenter.addObserver(NotificationCenter.NotificationName.budgetDidAlert, this)
+    }
+}
+</code></pre>
+<h2>Zen Score</h2>
+<p>Zen Score represents a user's financial health score. It falls in range (0; 1) and a higher value means better financial health.</p>
+<p>Zen Scores are calculated for a consequent range of dates (days), the maximum time period is defined by <a href="com.carrotlabs.smartcarrotframework.scoring/-zen-params/-m-a-x_-i-n-t-e-r-v-a-l.html">ZenParams.MAX_INTERVAL</a>. If the requested time interval exceeds the maximum time interval than the scores will be calculated only for the number of days defined by <a href="com.carrotlabs.smartcarrotframework.scoring/-zen-params/-m-a-x_-i-n-t-e-r-v-a-l.html">ZenParams.MAX_INTERVAL</a>. The <strong>closest</strong> date of the requested time interval will be included into the result set.</p>
+<p>Zen Scores require at least one <code>Budget</code> to be created, otherwise <a href="com.carrotlabs.smartcarrotframework/-zen-a-p-i/index.html">ZenAPI</a> will throw an error.</p>
+<h3>Packages</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="com.carrotlabs.smartcarrotframework/index.html">com.carrotlabs.smartcarrotframework</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="com.carrotlabs.smartcarrotframework.scoring/index.html">com.carrotlabs.smartcarrotframework.scoring</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Index</h3>
+<a href="alltypes/index.html">All Types</a>
+</BODY>
+</HTML>

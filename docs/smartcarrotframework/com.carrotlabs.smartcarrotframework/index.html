@@ -1,0 +1,294 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.carrotlabs.smartcarrotframework - smartcarrotframework</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">com.carrotlabs.smartcarrotframework</a><br/>
+<br/>
+<h2>Package com.carrotlabs.smartcarrotframework</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-budget/index.html">Budget</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Budget</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityTypeWithId</span></code>
+<p>Incremental Budget</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-budget-a-p-i/index.html">BudgetAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BudgetAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span><span class="symbol">, </span><a href="-notifiable/index.html"><span class="identifier">Notifiable</span></a></code>
+<p>The <a href="-budget-a-p-i/index.html">BudgetAPI</a> class provides access to various incremental budget related functionality.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-budget-frequency/index.html">BudgetFrequency</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">BudgetFrequency</span></code>
+<p>Budget Frequency</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-carrot-context/index.html">CarrotContext</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CarrotContext</span></code>
+<p>Carrot Context class. Them main entry point into the Framework.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-carrot-context-global/index.html">CarrotContextGlobal</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CarrotContextGlobal</span></code>
+<p>Carrot Context Globals</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-categorisation-a-p-i/index.html">CategorisationAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CategorisationAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span></code>
+<p>Allows you to categorise and learn a user’s personalisation setting.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-categorisation-type/index.html">CategorisationType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">CategorisationType</span></code>
+<p>Defines the model type used for categorisation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-notifiable/index.html">Notifiable</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Notifiable</span></code>
+<p>An interface to allow objects to subscribe to <a href="-notification-center/-notification-name/index.html">NotificationCenter.NotificationName</a> events.
+An object which implements this interface can be passed as a parameter to <a href="-notification-center/add-observer.html">NotificationCenter.addObserver</a> and <a href="-notification-center/remove-observer.html">NotificationCenter.removeObserver</a> methods
+in order to subscribe / unsubscribe from <a href="-notification-center/-notification-name/index.html">NotificationCenter.NotificationName</a> events.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-notification/index.html">Notification</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Notification</span></code>
+<p>Notification object. Used to</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-notification-center/index.html">NotificationCenter</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">NotificationCenter</span></code>
+<p>An observer / observable pattern main entry point. Should be used to notify other objects on various events related to transactions and budgets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-transaction/index.html">Transaction</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Transaction</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityTypeWithId</span></code>
+<p>Transaction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-transaction-a-p-i/index.html">TransactionAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TransactionAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span></code>
+<p>A <a href="-transaction-a-p-i/index.html">TransactionAPI</a> implements all the storage and categorisation functions on Transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-transaction-category/index.html">TransactionCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TransactionCategory</span></code>
+<p>The type used for Transaction Categories, their hierarchies, identfiers and id mappings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-zen-a-p-i/index.html">ZenAPI</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ZenAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span></code>
+<p><a href="-zen-a-p-i/index.html">ZenAPI</a> class is responsible for building Zen Scores.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-carrot-context-error/index.html">CarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a></code>
+<p>Base class for all <a href="-carrot-context/index.html">CarrotContext</a> exceptions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-could-not-load-bundle-id-carrot-context-error/index.html">CouldNotLoadBundleIdCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CouldNotLoadBundleIdCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Could not load application bundle id.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-empty-entity-id-carrot-context-error/index.html">EmptyEntityIdCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EmptyEntityIdCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Entity being saved into the persistent storage has an empty id. Entity ids should be managed by the customer application.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-encryption-invalid-initialisation-vector-error/index.html">EncryptionInvalidInitialisationVectorError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EncryptionInvalidInitialisationVectorError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Invalid encryption initialisation vector, not set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-encryption-key-not-set-carrot-context-error/index.html">EncryptionKeyNotSetCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EncryptionKeyNotSetCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Invalid Encryption key - not set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-failed-to-load-model-carrot-context-error/index.html">FailedToLoadModelCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FailedToLoadModelCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Could not load AI categorisation model</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-invalid-initialisation-vector-carrot-context-error/index.html">InvalidInitialisationVectorCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">InvalidInitialisationVectorCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Invalid encryption initialisation vector, it should be of 16 characters long.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-invalid-license-carrot-context-error/index.html">InvalidLicenseCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">InvalidLicenseCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Invalid license.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-license-has-expired-carrot-context-error/index.html">LicenseHasExpiredCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LicenseHasExpiredCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>License has expired.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-load-error-carrot-context-error/index.html">LoadErrorCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LoadErrorCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Could not load user's personalised data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-not-authorised-carrot-context-error/index.html">NotAuthorisedCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NotAuthorisedCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>The module customer tries to use is not licensed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-save-error-carrot-context-error/index.html">SaveErrorCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SaveErrorCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Could not save user's personalised data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-too-short-key-carrot-context-error/index.html">TooShortKeyCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TooShortKeyCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Invalid encryption key, it is too short.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-undefined-carrot-context-error/index.html">UndefinedCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UndefinedCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>Undefined Error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-wrong-bundle-id-carrot-context-error/index.html">WrongBundleIdCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WrongBundleIdCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>The license has been issued for a different application bundle id.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-zen-score-no-budgets-carrot-context-error/index.html">ZenScoreNoBudgetsCarrotContextError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ZenScoreNoBudgetsCarrotContextError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-carrot-context-error/index.html"><span class="identifier">CarrotContextError</span></a></code>
+<p>There was no one <a href="-budget/index.html">Budget</a> found. Zen Scores can be produced if there is at least one <a href="-budget/index.html">Budget</a> created.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

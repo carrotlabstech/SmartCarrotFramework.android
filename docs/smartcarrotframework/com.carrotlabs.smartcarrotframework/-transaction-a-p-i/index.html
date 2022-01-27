@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionAPI - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">TransactionAPI</a><br/>
+<br/>
+<h1>TransactionAPI</h1>
+<code><span class="keyword">class </span><span class="identifier">TransactionAPI</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ModuleAPI</span></code>
+<p>A <a href="./index.html">TransactionAPI</a> implements all the storage and categorisation functions on Transaction.</p>
+<p>The object of the class cannot be explicitly instantiated, please call <a href="../-carrot-context/get-transaction-a-p-i.html">CarrotContext.getTransactionAPI</a> for that.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="categorise.html">categorise</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">categorise</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$categorise(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)))/transactions">transactions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span></code>
+<p>Categorises an array of transactions and updates them in the persistent storage</p>
+<code><span class="keyword">fun </span><span class="identifier">categorise</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$categorise(com.carrotlabs.smartcarrotframework.Transaction)/transaction">transaction</span><span class="symbol">:</span>&nbsp;<a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a></code>
+<p>Categorises a transaction and updates it in the persistent storage</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$delete(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)))/transactions">transactions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes an array of <a href="../-transaction/index.html">Transaction</a>s from the persistent storage. The method uses <a href="../-transaction/id.html">Transaction.id</a> to identify a transaction to be deleted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-all.html">getAll</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span></code>
+<p>Returns all transactions. <a href="../-transaction/index.html">Transaction</a>s list is unsorted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-all-order-by-date-desc-text-id.html">getAllOrderByDateDescTextId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getAllOrderByDateDescTextId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span></code>
+<p>Returns all transactions from the persistent storage, sorted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-by-id.html">getById</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getById</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$getById(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">?</span></code>
+<p>Returns a transaction by it's id. Returns <a href="#">null</a> if there is no transaction with such an id in the persistent storage.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upsert.html">upsert</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">upsert</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)), kotlin.Boolean)/transactions">transactions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-transaction/index.html"><span class="identifier">Transaction</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionAPI$upsert(kotlin.collections.List((com.carrotlabs.smartcarrotframework.Transaction)), kotlin.Boolean)/categorise">categorise</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds or updates an array of <a href="../-transaction/index.html">Transaction</a>s.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

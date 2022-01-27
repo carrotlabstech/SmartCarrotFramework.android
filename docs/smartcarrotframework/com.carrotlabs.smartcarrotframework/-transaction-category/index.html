@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransactionCategory - smartcarrotframework</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">smartcarrotframework</a>&nbsp;/&nbsp;<a href="../index.html">com.carrotlabs.smartcarrotframework</a>&nbsp;/&nbsp;<a href="./index.html">TransactionCategory</a><br/>
+<br/>
+<h1>TransactionCategory</h1>
+<code><span class="keyword">class </span><span class="identifier">TransactionCategory</span></code>
+<p>The type used for Transaction Categories, their hierarchies, identfiers and id mappings.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TransactionCategory</span><span class="symbol">(</span><span class="symbol">)</span></code><code><span class="identifier">TransactionCategory</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionCategory$<init>(kotlin.String)/idName">idName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TransactionCategory</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionCategory$<init>(kotlin.Int)/intId">intId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Public constructor. if the category <code>id</code> is not set then category is initialised to the <code>UNCATEGORISED</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="id-name.html">idName</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">idName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Category String Id</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-int-id.html">getIntId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIntId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Returns category <code>Int Id</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-parent-category.html">getParentCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getParentCategory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TransactionCategory</span></a><span class="symbol">?</span></code>
+<p>Returns the parent category of a sub-category.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-sub-categories.html">getSubCategories</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSubCategories</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">TransactionCategory</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Provides category sub-categories.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-parent.html">isParent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isParent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Finds whether a category is a top level category.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is-sub.html">isSub</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isSub</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Finds whether a category is a sub-category.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Prints a full <a href="id-name.html">TransactionCategory.idName</a> path to the category.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string-short.html">toStringShort</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toStringShort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Prints <a href="id-name.html">TransactionCategory.idName</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-n-u-m-b-e-r_-o-f_-c-a-t-e-g-o-r-i-e-s.html">NUMBER_OF_CATEGORIES</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">NUMBER_OF_CATEGORIES</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Number of supported categories</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-n-c-a-t-e-g-o-r-i-s-e-d.html">UNCATEGORISED</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">UNCATEGORISED</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TransactionCategory</span></a></code>
+<p>Uncategorised <a href="./index.html">TransactionCategory</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-n-c-a-t-e-g-o-r-i-s-e-d_-i-d-n-a-m-e.html">UNCATEGORISED_IDNAME</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">UNCATEGORISED_IDNAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Uncategorised category idName : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-n-c-a-t-e-g-o-r-i-s-e-d_-i-n-t_-i-d.html">UNCATEGORISED_INT_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">UNCATEGORISED_INT_ID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Uncategorised category id : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-category.html">getCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCategory</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionCategory.Companion$getCategory(kotlin.Int)/intId">intId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TransactionCategory</span></a></code>
+<p>Returns a <a href="./index.html">TransactionCategory</a> struct by its <a href="#">TransactionCategory.intId</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-int-id.html">getIntId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIntId</span><span class="symbol">(</span><span class="identifier" id="com.carrotlabs.smartcarrotframework.TransactionCategory.Companion$getIntId(kotlin.String)/idName">idName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Returns category <code>IntId</code> by its String Name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-parent-categories.html">getParentCategories</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getParentCategories</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">TransactionCategory</span></a><span class="symbol">&gt;</span></code>
+<p>Returns an array of all top-level <a href="./index.html">TransactionCategory</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

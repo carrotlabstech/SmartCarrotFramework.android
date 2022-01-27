@@ -1,0 +1,99 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    def getVersionName = {
+        return "1.0.0"
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 2
+        versionName getVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        buildConfigField "String", "COUNTRY_TARGET", "\"CH\""
+//        buildConfigField "String", "COUNTRY_TARGET", "\"US\""
+    }
+
+    // otherwise json.tostring method is not mocked by unit tests
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    // CarrotLabs: don't compress TFLite model
+    aaptOptions {
+        noCompress "be"
+    }
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$rootDir/docs"
+        includes = ['packages.md']
+
+        // Emit warnings about not documented members.
+        reportUndocumented = true
+    }
+}
+
+dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation(name:'tensorflow-lite', ext:'aar')
+//    implementation('com.carrotlabs.smartcarrotframework:tensorflow-lite@aar') {
+//        transitive(true)
+//    }
+
+//    api(name:'tensorflow-lite', ext:'aar')
+
+    // needs to use non jdk7, because jdk7 is not supported on android
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "com.carrotlabs.smartcarrotframework:tensorflow-lite:1.0.1"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.21"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.3.0'
+//    implementation "com.carrotlabs.smartcarrotframework:tensorflow-lite:1.0.0"
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // CarrotLabs: otherwise json.tostring method is not mocked by unit tests
+    // https://stackoverflow.com/questions/32385092/why-is-my-jsonobject-related-unit-test-failing/41398830
+    testImplementation 'org.json:json:20201115'
+}
+
+apply from: "gradle-mvn-push.gradle"
